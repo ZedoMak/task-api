@@ -1,10 +1,6 @@
 // this where all the type script types are defined 
 
-import { error } from "node:console"
-import { DropArgument } from "node:net"
-import { Interface } from "node:readline"
-import { int } from "zod"
-import { extend } from "zod/v4/core/util.cjs"
+import { Request } from "express"
 
 // User-type - represents the user in the system
 
