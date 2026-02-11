@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt'
 
 const SALT_ROUNDS =12 // HIGHER = more secure bt slower
 // hash password
-export async function hashPasword(password: string):Promise<string> {
+export async function hashPassword(password: string):Promise<string> {
    // bcrypt.hash(password, saltRounds)
   // - Automatically generates a salt
   // - Uses bcrypt algorithm (slow by design to prevent brute force)
