@@ -18,11 +18,11 @@ export function generateToken(payload: JWTPayload): string {
       email: payload.email,
     },
     JWT_SECRET,
-    {
-      expiresIn: JWT_EXPIRES_IN,
-      issuer: 'task-api',
-      audience: 'task-api-users',
-    }
+    // {
+    //   expiresIn: JWT_EXPIRES_IN,
+    //   issuer: 'task-api',
+    //   audience: 'task-api-users',
+    // }
   );
 }
 

@@ -1,4 +1,4 @@
-import { email, z } from 'zod'
+import {z} from 'zod'
 
 // zod schema for registration
  export const registerSchema = z.object({
@@ -36,4 +36,3 @@ import { email, z } from 'zod'
  export type RegisterInput = z.infer<typeof registerSchema>
  export type LoginInput = z.infer<typeof loginSchema>
  export type RefreshTokenInput = z.infer<typeof refreshTokenSchema>
- 

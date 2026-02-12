@@ -1,0 +1,52 @@
+### Health Check
+GET http://localhost:3000/api/health
+
+### Register User
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "Test1234!",
+  "name": "Test User"
+}
+
+### Login User
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "Test1234!"
+}
+
+### Get Current User (Protected)
+GET http://localhost:3000/api/auth/me
+Authorization: Bearer {{auth_token}}
+
+### Create Task (Protected)
+POST http://localhost:3000/api/tasks
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "title": "Learn TypeScript",
+  "description": "Complete Project 1 of Auth SaaS"
+}
+
+### Get User Tasks (Protected)
+GET http://localhost:3000/api/tasks
+Authorization: Bearer {{auth_token}}
+
+### Update Task (Protected)
+PUT http://localhost:3000/api/tasks/{{task_id}}
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "status": "in-progress"
+}
+
+### Delete Task (Protected)
+DELETE http://localhost:3000/api/tasks/{{task_id}}
+Authorization: Bearer {{auth_token}}

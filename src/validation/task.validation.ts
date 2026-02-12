@@ -1,7 +1,4 @@
 import { z } from 'zod'
-import { TaskStatus } from '@/types'
-import { title } from 'node:process'
-import { describe } from 'zod/v4/core'
 
 export const createTaskSchema = z.object({
     title: z.string()
@@ -29,4 +26,3 @@ export const updateTaskSchema = z.object({
 
 export type CreateTaskInput = z.infer<typeof createTaskSchema>
 export type UpdateTaskInput = z.infer<typeof updateTaskSchema>
-

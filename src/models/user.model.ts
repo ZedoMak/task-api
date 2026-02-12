@@ -1,8 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import {User} from '../types'
-import { comparePassword, hashPassword } from "@/utils/password.utils";
-import { compare } from "bcrypt";
-import { is } from "zod/v4/locales";
+import { comparePassword, hashPassword } from "../utils/password.utils";
 
 
 // in-memory database // real db as i gon on 😁
